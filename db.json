@@ -1,0 +1,218 @@
+{
+    "profile": {
+        "id": 1,
+        "name": "Blake",
+        "lastname": "Doe",
+        "email": "me@emai.com",
+        "phone": "555-765987",
+        "address": "NY, Wall Street 12 A",
+        "city": "New York",
+        "state": "NY",
+        "zip": "10001",
+        "country": "USA",
+        "bio": "ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "website": "http://www.website.com"
+    },
+    "seedbeds": [
+        {
+            "id": 1,
+            "name": "Logo",
+            "description": "logo clients seedbed",
+            "creationDate": "21/01/2021"
+        },
+        {
+            "id": 2,
+            "name": "Styleguides",
+            "description": "Style Guides clients seedbed",
+            "creationDate": "14/02/2021"
+        },
+        {
+            "id": 3,
+            "name": "Packaging",
+            "description": "Packing clients seedbed",
+            "creationDate": "06/03/2021"
+        }
+    ],
+    "clients": [
+        {
+            "id": 1,
+            "name": "Martin Jonson",
+            "title": "Business Owner.",
+            "email": "martin@emai.com",
+            "location": "Austin, TX",
+            "lastInteraction": "27/03/2022 10:11",
+            "nurturing": true,
+            "growthStatus": "Grown",
+            "seedbedId": 1,
+            "active": true
+        },
+        {
+            "id": 2,
+            "name": "John Smith",
+            "title": "Director.",
+            "email": "john@email.com",
+            "location": "Arington, TX",
+            "lastInteraction": "27/03/2022 10:20",
+            "nurturing": true,
+            "growthStatus": "Grown",
+            "seedbedId": 3,
+            "active": true
+        },
+        {
+            "id": 3,
+            "name": "Jessica Rabit",
+            "title": "Project Manager.",
+            "email": "jessica@email.com",
+            "location": "Houston, TX",
+            "lastInteraction": "27/03/2022 11:11",
+            "nurturing": false,
+            "growthStatus": "Growing",
+            "seedbedId": 1,
+            "active": true
+        },
+        {
+            "id": 4,
+            "name": "Mary Jane",
+            "title": "Editor.",
+            "email": "mary@email.com",
+            "location": "Dallas, TX",
+            "lastInteraction": "27/03/2022 12:11",
+            "nurturing": true,
+            "growthStatus": "Growing",
+            "seedbedId": 1,
+            "active": true
+        },
+        {
+            "id": 5,
+            "name": "John Doe",
+            "title": "Business Owner.",
+            "email": "johns@email.com",
+            "location": "Austin, TX",
+            "lastInteraction": "27/03/2022 12:20",
+            "nurturing": true,
+            "growthStatus": "Growing",
+            "seedbedId": 1,
+            "active": false
+        },
+        {
+            "id": 6,
+            "name": "Jane Doe",
+            "title": "Business Owner.",
+            "email": "jane@email.com",
+            "location": "San Antonio, TX",
+            "lastInteraction": "27/03/2022 14:11",
+            "nurturing": false,
+            "growthStatus": "Stuck",
+            "seedbedId": 1,
+            "active": true
+        },
+        {
+            "id": 7,
+            "name": "James Jackson",
+            "title": "Business Owner.",
+            "email": "mjames@email.com",
+            "location": "San Antonio, TX",
+            "lastInteraction": "27/03/2022 15:11",
+            "nurturing": true,
+            "growthStatus": "Stuck",
+            "seedbedId": 1,
+            "active": true
+        },
+        {
+            "id": 8,
+            "name": "John Adams",
+            "title": "Business Owner.",
+            "email": "johnadams@email.com",
+            "location": "Houston, TX",
+            "lastInteraction": "27/03/2022 1:20",
+            "nurturing": true,
+            "growthStatus": "Stuck",
+            "seedbedId": 1,
+            "active": true
+        },
+        {
+            "id": 9,
+            "name": "Juanita de la Cruz",
+            "title": "Business Owner.",
+            "email": "juanita@email.com",
+            "location": "Dallas, TX",
+            "lastInteraction": "27/03/2022 13:11",
+            "nurturing": false,
+            "growthStatus": "Growing",
+            "seedbedId": 1,
+            "active": true
+        },
+        {
+            "id": 10,
+            "name": "J M Jonson",
+            "title": "Business Owner.",
+            "email": "mjonson@email.com",
+            "location": "Austin, TX",
+            "lastInteraction": "27/03/2022 12:11",
+            "nurturing": true,
+            "growthStatus": "Grown",
+            "seedbedId": 1,
+            "active": true
+        },
+        {
+            "id": 11,
+            "name": "Oscar Martinez",
+            "title": "Business Owner.",
+            "email": "oscarm@email.com",
+            "location": "Arington, TX",
+            "lastInteraction": "27/03/2022 16:20",
+            "nurturing": true,
+            "growthStatus": "Stuck",
+            "seedbedId": 1,
+            "active": true
+        },
+        {
+            "id": 12,
+            "name": "Linda Smith",
+            "title": "Business Owner.",
+            "email": "lsmith@email.com",
+            "location": "San Antonio, TX",
+            "lastInteraction": "27/03/2022 19:11",
+            "nurturing": false,
+            "growthStatus": "Stuck",
+            "seedbedId": 1,
+            "active": true
+        },
+        {
+            "id": 13,
+            "name": "Xavier Davis",
+            "title": "Business Owner.",
+            "email": "xavierd@email.com",
+            "location": "Houston, TX",
+            "lastInteraction": "27/03/2022 0:11",
+            "nurturing": true,
+            "growthStatus": "Grown",
+            "seedbedId": 2,
+            "active": true
+        },
+        {
+            "id": 14,
+            "name": "Ximena Lopez",
+            "title": "Business Owner.",
+            "email": "ximenal@email.com",
+            "location": "Houston, TX",
+            "lastInteraction": "27/03/2022 10:20",
+            "nurturing": true,
+            "growthStatus": "Grown",
+            "seedbedId": 3,
+            "active": true
+        },
+        {
+            "id": 15,
+            "name": "Kate Green",
+            "title": "Business Owner.",
+            "email": "kateg@email.com",
+            "location": "Austin, TX",
+            "lastInteraction": "27/03/2022 19:11",
+            "nurturing": false,
+            "growthStatus": "Growing",
+            "seedbedId": 3,
+            "active": true
+        }
+    ]
+}

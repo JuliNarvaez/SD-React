@@ -1,0 +1,33 @@
+.sidebar {
+    width: 200px;
+    background-color: #ececec;
+    color: black;
+    height: 100vh;
+    text-align: left;
+    padding: 20px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    font-weight: bold;
+
+    &_avatar {
+        border-radius: 50%;
+    }
+
+    &_name {
+        color: black;
+    }
+}
+
+.menu {
+    margin-top: 150px;
+}
+
+.menuItem {
+    display: flex;
+    column-gap: 10px;
+    margin: 50px 0;
+}
