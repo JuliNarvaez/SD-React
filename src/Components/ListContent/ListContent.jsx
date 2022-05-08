@@ -1,4 +1,4 @@
-import { Table, Switch } from 'antd';
+import { Table, Switch, Tag } from 'antd';
 import { getClient } from '../../Utils/apiRequest'
 import { useEffect, useState } from 'react'
 
@@ -66,10 +66,18 @@ function ListContent() {
         }, {
             title: 'Growth Status',
             dataIndex: 'growthStatus',
-            sorter: {
-                compare: (a, b) => a.growthStatus - b.growthStatus,
-                multiples: 7,
-            },
+            render: (a) => {
+                switch (a) {
+                    case "Grown":
+                        return <Tag color="green">{a}</Tag>
+                    case "Growing":
+                        return <Tag color="cyan">{a}</Tag>
+                    case "Stuck":
+                        return <Tag color="orange">{a}</Tag>
+                    default:
+                        return <Tag color="red">{a}</Tag>
+                }
+            }
         }
     ];
 
@@ -77,8 +85,18 @@ function ListContent() {
         console.log('params', pagination, filters, sorter, extra);
     }
 
+    const rowSelection = {
+        onChange: (selectedRowKeys, selectedRows) => {
+            console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
+        },
+        getCheckboxProps: (record) => ({
+            disabled: record.name === 'Disabled User',
+            name: record.name,
+        }),
+    };
+
     return (
-        <Table columns={columns} dataSource={client} onChange={onChange} />
+        <Table rowSelection={{ rowSelection }} columns={columns} dataSource={client} onChange={onChange} />
     )
 }
 export default ListContent;

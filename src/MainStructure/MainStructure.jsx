@@ -3,16 +3,15 @@ import { ToolFilled, BellFilled, PlusOutlined, SearchOutlined, ArrowDownOutlined
 import Search from 'antd/lib/input/Search';
 
 import ListContent from '../Components/ListContent/ListContent';
+import { Divider } from 'antd';
+import Profile from '../Components/Profile/Profile';
 
 export default function MainStructure() {
 
     return (
         <div className="mainStructure">
             <div className="sidebar">
-                <div className="profile">
-                    <img src="https://picsum.photos/200" alt="" className="profile_avatar" />
-                    <p className="profile_name">Black Doe</p>
-                </div>
+                <Profile />
                 <div className="menu">
                     <ul>
                         <li>
@@ -59,7 +58,7 @@ export default function MainStructure() {
                         </li>
                     </ul>
                 </div>
-                <hr />
+                <Divider />
                 <div className="actions">
                     <ul className='actions_container'>
                         <li>
@@ -68,7 +67,7 @@ export default function MainStructure() {
                         </li>
                     </ul>
                 </div>
-                <hr />
+                <Divider />
                 <div className="actions">
                     <ul className='actions_containter'>
                         <li><ArrowDownOutlined />Active Seedbeds</li>
@@ -91,10 +90,9 @@ export default function MainStructure() {
                     <Search placeholder="input search text" allowClear style={{ width: 640 }} />
                 </div>
                 <p>Logo Seedbed <ArrowDownOutlined /></p>
-                <hr />
+                <Divider />
                 <p>Showing 10 of ... seeds</p>
                 <div className="content_list">
-
                     <div className="list_content">
                         <ListContent />
                     </div>
