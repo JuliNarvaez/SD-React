@@ -1,0 +1,19 @@
+.profile {
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
+
+    &_avatar {
+        border-radius: 50%;
+        width: 58px;
+        height: 58px;
+        background-color: gray;
+    }
+
+    &_name {
+        color: #1a1a1a;
+        margin: 0;
+        font-size: 18px;
+        font-weight: bold;
+    }
+}

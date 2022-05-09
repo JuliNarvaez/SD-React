@@ -30,6 +30,17 @@ export async function getClient() {
     }
 }
 
+export async function deleteData(id, type) {
+    try {
+        const response = await fetch(`${baseUrl}${type}/${id}`, {
+            method: 'DELETE',
+        })
+        console.log(`Deleted ${type} User in ${response}`)
+    } catch (error) {
+        console.error(error.message);
+    }
+}
+
 
 
 

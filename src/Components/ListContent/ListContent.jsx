@@ -1,20 +1,20 @@
-import { Table, Switch, Tag } from 'antd';
+import { Table, Switch, Tag, Button } from 'antd';
 import { getClient } from '../../Utils/apiRequest'
 import { useEffect, useState } from 'react'
 
 function ListContent() {
-    const [client, setClient] = useState(null);
+    const [list, setList] = useState(null);
 
     useEffect(() => {
         const getClients = async () => {
             const data = await getClient()
-            const cData = data.map(element => ({ key: element.id, ...element }))
-            setClient(cData);
+            const clientList = data.map(e => ({ key: e.id, ...e }))
+            setList(clientList);
         }
-        if (client === null) {
+        if (list === null) {
             getClients();
         }
-    }, [client])
+    }, [list])
 
 
     const columns = [
@@ -38,7 +38,7 @@ function ListContent() {
             title: 'Email',
             dataIndex: 'email',
             sorter: {
-                compare: (a, b) => a.email - b.email,
+                compare: (a, b) => a.email.localeCompare(b.email),
                 multiple: 2,
             },
         },
@@ -46,7 +46,7 @@ function ListContent() {
             title: 'Location',
             dataIndex: 'location',
             sorter: {
-                compare: (a, b) => a.location - b.location,
+                compare: (a, b) => a.location.localeCompare(b.location),
                 multiple: 1,
             },
         }, {
@@ -81,22 +81,48 @@ function ListContent() {
         }
     ];
 
-    function onChange(pagination, filters, sorter, extra) {
-        console.log('params', pagination, filters, sorter, extra);
-    }
+    const [state, setState] = useState({
+        selectedRowKeys: [],
+        loading: false,
+    });
 
-    const rowSelection = {
-        onChange: (selectedRowKeys, selectedRows) => {
-            console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
-        },
-        getCheckboxProps: (record) => ({
-            disabled: record.name === 'Disabled User',
-            name: record.name,
-        }),
+    const start = () => {
+        setState({ loading: true });
+        setTimeout(() => {
+            setState({
+                selectedRowKeys: [],
+                loading: false,
+            });
+        }, 1000);
     };
 
+    console.log(state);
+
+    const onSelectChange = (selectedRowKeys) => {
+        console.log('selectedRowKeys changed: ', selectedRowKeys);
+        setState({ selectedRowKeys });
+    };
+
+    const { loading, selectedRowKeys } = state;
+
+    const rowSelection = () => ({
+        selectedRowKeys,
+        onChange: onSelectChange
+    });
+
+    let hasSelected = selectedRowKeys.length > 0;
+
+
     return (
-        <Table rowSelection={{ rowSelection }} columns={columns} dataSource={client} onChange={onChange} />
+        <>
+            <div className="actions">
+                <p>Showing 10 of {list?.length} seeds</p>
+                <Button type="primary" onClick={start} disabled={!hasSelected} loading={loading} style={{ width: '200px' }}>
+                    Delete
+                </Button>
+            </div>
+            <Table rowSelection={{ rowSelection }} columns={columns} dataSource={list} />
+        </>
     )
 }
 export default ListContent;

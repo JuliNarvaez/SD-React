@@ -1,0 +1,29 @@
+.menu {
+    margin-top: 150px;
+    font-weight: bold;
+
+    &_item {
+        display: flex;
+        column-gap: 24px;
+        margin: 50px 0;
+        margin-left: 16px;
+
+        &_icon {
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+        }
+
+        &_name {
+            color: #808080;
+        }
+    }
+
+    &_item:hover {
+
+        &_icon,
+        &_name {
+            color: #1a1a1a;
+        }
+    }
+}

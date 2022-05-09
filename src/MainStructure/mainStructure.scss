@@ -22,7 +22,7 @@
     padding: 45px 16px;
 }
 
-.sidebar-in {
+.subMenu {
     width: 295px;
     background-color: #f9f9f9;
     color: black;
@@ -34,74 +34,6 @@
 
 hr {
     border-top: 1px solid #E5E5E5;
-}
-
-.profile {
-    display: flex;
-    align-items: center;
-    column-gap: 24px;
-
-    &_avatar {
-        border-radius: 50%;
-        width: 58px;
-        height: 58px;
-        background-color: gray;
-    }
-
-    &_name {
-        color: #1a1a1a;
-        margin: 0;
-        font-size: 18px;
-        font-weight: bold;
-    }
-}
-
-.menu {
-    margin-top: 150px;
-    font-weight: bold;
-
-    &_item {
-        display: flex;
-        column-gap: 24px;
-        margin: 50px 0;
-        margin-left: 16px;
-
-        &_icon {
-            border-radius: 50%;
-            width: 24px;
-            height: 24px;
-        }
-
-        &_name {
-            color: #808080;
-        }
-    }
-
-    &_item:hover {
-
-        &_icon,
-        &_name {
-            color: #1a1a1a;
-        }
-    }
-}
-
-.actions {
-    color: #808080;
-    margin: 8px 0;
-
-    ul {
-        margin: 8px;
-    }
-
-    li {
-        margin: 16px 0
-    }
-
-    &_container {
-        padding: 0 20px;
-
-    }
 }
 
 .content {
@@ -118,5 +50,11 @@ hr {
     &_content {
         display: flex;
         gap: 8px;
+        flex-direction: column;
     }
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
 }
